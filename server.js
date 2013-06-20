@@ -3,8 +3,9 @@
 'use strict';
 
 var http = require('http'),
+    path = require('path'),
     connect = require('connect'),
-    directory = './static';
+    directory = path.join(__dirname, 'static');
 
 connect()
     .use(connect.static(directory))
