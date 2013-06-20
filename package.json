@@ -1,0 +1,7 @@
+{
+    "name": "oregu",
+    "version": "0.1.0",
+    "dependencies": {
+        "connect" : "2.x"
+    }
+}
