@@ -1,5 +1,6 @@
 {
     "name": "oregu",
+    "description": "oregu's home page",
     "version": "0.1.0",
     "dependencies": {
         "connect" : "2.x"
