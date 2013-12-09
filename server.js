@@ -1,9 +1,8 @@
-/* Default proxy server on port 8000 */
+/* A basic static file server on port 8000 */
 /*jslint node: true */
 'use strict';
 
-var http = require('http'),
-    path = require('path'),
+var path = require('path'),
     connect = require('connect'),
     directory = path.join(__dirname, 'static');
 
