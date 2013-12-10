@@ -7,41 +7,59 @@
 <meta name="description" content="Personal website of Oleg Sklyanchuk (oregu)">
 <title>Oleg Sklyanchuk</title>
 <style type="text/css">
-    html, body, pre {
-        margin: 0;
-        padding: 0;
+    html, body, pre, ul { margin: 0; padding: 0; }
+    html, pre {
         font-size: 18px;
-        line-height: 23px;
-    }
-    a { color: inherit; text-decoration: none; }
-    pre {
-        position: absolute;
-        margin-top: -127px;
-        top: 50%;
-        width: 100%;
-        text-align: center;
+        line-height: 1.4em;
         font-family: Consolas, "Liberation Mono", Courier, monospace;
         text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.08);
     }
+    ul { list-style: none; }
+    a { color: inherit; text-decoration: none; }
     a:hover {
         color: rgb(220, 20, 60);
         text-shadow: 2px 2px 1px rgba(220, 20, 60, 0.08);
     }
+    .container {
+        position: absolute;
+        margin-top: -164px;
+        padding: 25px 5%;
+        top: 50%;
+        width: 90%;
+        text-align: center;
+    }
+    .about {
+        margin: 1.4em auto;
+        max-width: 30em;
+    }
+    @media (max-height: 325px) {
+        .container {
+            margin-top: 0;
+            top: 0%;
+        }
+    }
+    @media (orientation: portrait) {
+        .container { margin-top: -190px; }
+        a { line-height: 2.2em; }
+    }
+    @media (orientation: landscape) {
+        a { line-height: 1.8em; }
+    }
 </style>
 </head>
-<body>
-<pre>
-\|||||/
+<body class="container">
+<pre>\|||||/
 ('&#3232;_&#3232;')
  c\.../&#x3064;
-/_\_\
-
-Hello, my name's Oleg. I like programming,
-photography and foreign languages.
-
-<a href="https://github.com/olegskl">Github</a>
-<a href="http://stackoverflow.com/users/632133/oleg">StackOverflow</a>
-<a href="https://www.google.com/+OlegSklyanchuk">Google+</a>
-</pre>
+/_\_\</pre>
+<p class="about">
+    Hello, my name's Oleg. I&nbsp;like programming,
+    photography and foreign languages.
+</p>
+<ul>
+    <li><a href="https://github.com/olegskl">Github</a></li>
+    <li><a href="http://stackoverflow.com/users/632133/oleg">StackOverflow</a></li>
+    <li><a href="https://www.google.com/+OlegSklyanchuk">Google+</a></li>
+</ul>
 </body>
 </html>
