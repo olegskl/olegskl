@@ -1,14 +1,17 @@
-/* A basic static file server on port 8000 */
+/* A simple static file server on port 8000 */
+
 /*jslint node: true */
 'use strict';
 
 var path = require('path'),
     connect = require('connect'),
-    directory = path.join(__dirname, 'static'),
-    threeHours = 10800000, // 10800 seconds
+    directoryPath = path.join(__dirname, 'public'),
+    faviconPath = path.join(directoryPath, 'favicon.ico'),
+    oneDay = 86400000, // 86400 seconds, 24 hours
     port = 8000;
 
 connect()
+    .use(connect.favicon(faviconPath))
     .use(connect.compress())
-    .use(connect.static(directory, {maxAge: threeHours}))
+    .use(connect.static(directoryPath, {maxAge: oneDay}))
     .listen(port);
