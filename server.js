@@ -11,7 +11,7 @@ var path = require('path'),
     port = 8000;
 
 connect()
-    .use(connect.favicon(faviconPath))
     .use(connect.compress())
+    .use(connect.favicon(faviconPath))
     .use(connect.static(directoryPath, {maxAge: oneDay}))
     .listen(port);
