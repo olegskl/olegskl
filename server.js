@@ -6,12 +6,10 @@
 var path = require('path'),
     connect = require('connect'),
     directoryPath = path.join(__dirname, 'public'),
-    faviconPath = path.join(directoryPath, 'favicon.ico'),
     oneDay = 86400000, // 86400 seconds, 24 hours
-    port = 8000;
+    port = 8006;
 
 connect()
     .use(connect.compress())
-    .use(connect.favicon(faviconPath))
     .use(connect.static(directoryPath, {maxAge: oneDay}))
     .listen(port);
