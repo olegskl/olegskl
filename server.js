@@ -7,7 +7,7 @@ var path = require('path'),
     connect = require('connect'),
     directoryPath = path.join(__dirname, 'public'),
     oneDay = 86400000, // 86400 seconds, 24 hours
-    port = 8006;
+    port = 8000;
 
 connect()
     .use(connect.compress())
