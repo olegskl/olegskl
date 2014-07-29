@@ -1,7 +1,7 @@
 {
     "name": "oregu",
     "description": "Personal website of Oleg Sklyanchuk (oregu)",
-    "version": "0.3",
+    "version": "0.3.0",
     "dependencies": {
         "express": "4.x",
         "compression": "1.x",
