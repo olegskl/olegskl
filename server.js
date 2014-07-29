@@ -4,8 +4,10 @@
 'use strict';
 
 var path = require('path'),
-    connect = require('connect'),
-    directoryPath = path.join(__dirname, 'public'),
+    express = require('express'),
+    compression = require('compression'),
+    serveStatic = require('serve-static'),
+    publicDir = path.join(__dirname, 'public'),
     oneDay = 86400000, // 86400 seconds, 24 hours
     port = 8000;
 
@@ -22,8 +24,8 @@ function compatibilityHeaders(request, response, next) {
     next();
 }
 
-connect()
+express()
     .use(compatibilityHeaders)
-    .use(connect.compress())
-    .use(connect.static(directoryPath, {maxAge: oneDay}))
+    .use(compression())
+    .use(serveStatic(publicDir, {maxAge: oneDay}))
     .listen(port);

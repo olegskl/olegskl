@@ -1,9 +1,11 @@
 {
     "name": "oregu",
     "description": "Personal website of Oleg Sklyanchuk (oregu)",
-    "version": "0.2.1",
+    "version": "0.3",
     "dependencies": {
-        "connect": "2.x"
+        "express": "4.x",
+        "compression": "1.x",
+        "serve-static": "1.4.x"
     },
     "repository": {
         "type": "git",
