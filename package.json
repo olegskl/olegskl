@@ -1,7 +1,7 @@
 {
-    "name": "oregu",
-    "description": "Personal website of Oleg Sklyanchuk (oregu)",
-    "version": "0.3.0",
+    "name": "olegskl",
+    "description": "Personal website of Oleg Sklyanchuk",
+    "version": "0.3.2",
     "dependencies": {
         "express": "4.x",
         "compression": "1.x",
@@ -9,6 +9,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/olegskl/oregu.git"
+        "url": "https://github.com/olegskl/olegskl.git"
     }
 }
