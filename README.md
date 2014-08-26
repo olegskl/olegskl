@@ -1,3 +1,3 @@
-My personal minimalistic website, [oregu.com](http://oregu.com)
+My personal minimalistic website, [olegskl.com](http://olegskl.com)
 
 http://opensource.org/licenses/mit-license.html
