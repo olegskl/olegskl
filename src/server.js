@@ -7,7 +7,7 @@ var path = require('path'),
     express = require('express'),
     compression = require('compression'),
     serveStatic = require('serve-static'),
-    publicDir = path.join(__dirname, 'public'),
+    publicDir = path.join(__dirname, 'static'),
     oneDay = 86400000, // 86400 seconds, 24 hours
     port = 8000;
 
