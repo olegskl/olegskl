@@ -3,7 +3,8 @@ Build system
 
 This is the build system for the main site at [olegskl.com](http://olegskl.com).
 
- - Run `gulp` or `gulp dev` when developing.
+ - Run `gulp` or `gulp serve-dev` to launch a live-reloaded site from dev build.
+ - Run `gulp serve-dist` to launch a live-reloaded site from distribution build.
  - Run `gulp dist` to build a distribution version.
 
 By default both *dev* and *dist* will write the generated code to the *./build*
@@ -69,10 +70,10 @@ Server options
 --------------------------------------------------------------------------------
 
     serverOptions =
+      path: "#{destination.server}/server.js"
       env:
         PORT: 1337
         CACHE_AGE: 0
-      path: "#{destination.server}/server.js"
 
 Existing vhost
 --------------------------------------------------------------------------------
@@ -130,7 +131,7 @@ Server script task
     gulp.task 'server', ->
       gulp
         .src source.serverScripts
-        .pipe coffee {bare: true} # decoffeify without IIFE wrappers
+        .pipe coffee bare: true # decoffeify without IIFE wrappers
         .pipe gulp.dest destination.server # write to disk
         .pipe server serverOptions # restart the server
 
@@ -225,7 +226,7 @@ Serve task for development build
       sequence 'dev', 'watch-dev', cb
 
 
-Serve task for distribution buikd
+Serve task for distribution build
 --------------------------------------------------------------------------------
 Do not use for production. This is just to check if the app compiles.
 
