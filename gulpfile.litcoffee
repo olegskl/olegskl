@@ -44,7 +44,7 @@ Source files and folders
     source.client = 'src/client'
     source.clientIndex = "#{source.client}/index.html"
     source.clientFavicon = "#{source.client}/favicon.ico"
-    source.clientScripts = "#{source.client}/scripts/**/*.js"
+    source.clientScripts = "#{source.client}/scripts/**/*.*coffee"
     source.clientStyles = [
       "#{source.client}/styles/**/*.css"
       "#{source.client}/fonts/**/*.css"
@@ -144,6 +144,7 @@ Not supposed to be used directly. Use `gulp dist` instead.
 
       scripts = gulp
         .src source.clientScripts
+        .pipe coffee bare: false # decoffeify with IIFE wrappers
         .pipe concat 'all.js'
         .pipe do minifyJS
 
@@ -179,6 +180,7 @@ Not supposed to be used directly. Use `gulp dev` instead.
 
       scripts = gulp
         .src source.clientScripts
+        .pipe coffee bare: false # decoffeify with IIFE wrappers
         .pipe gulp.dest destination.clientScripts
 
       styles = gulp
