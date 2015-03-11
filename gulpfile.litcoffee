@@ -47,7 +47,7 @@ Source files and folders
     source.clientFavicon = "#{source.client}/favicon.ico"
     source.clientScripts = "#{source.client}/scripts/**/*.*coffee"
     source.clientStyles = [
-      "#{source.client}/styles/**/*.less"
+      "#{source.client}/styles/main.less"
       "#{source.client}/fonts/**/*.css"
     ]
 

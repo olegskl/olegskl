@@ -1,0 +1,18 @@
+// Greeting
+// -----------------------------------------------------------------------------
+
+// This is just a "Hello there" inline element
+// which should disappear due to lack of space
+// when the device is in portrait mode:
+@media (orientation: portrait) {
+
+  .greeting {
+    display: none;
+  }
+
+  .greeting:after {
+    content: '\A';
+    white-space: pre;
+  }
+
+}

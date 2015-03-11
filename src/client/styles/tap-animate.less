@@ -1,0 +1,23 @@
+// Tap animation
+// -----------------------------------------------------------------------------
+
+@keyframes pulsate {
+  0% { transform: scale(0.9); }
+  30% { transform: scale(1.2); }
+  65% { transform: scale(0.9); }
+  90% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.tap-animate {
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+.tap-animate-press-and-hold {
+  transform: scale(0.9);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.tap-animate-release {
+  animation: pulsate 1s ease-out;
+}
