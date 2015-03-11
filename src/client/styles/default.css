@@ -132,11 +132,6 @@ section {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
 }
 
-.tap-animate-press-and-hold {
-  transform: scale(0.9);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
-}
-
 .tap-animate-release {
   animation: pulsate 1s ease-out;
 }
