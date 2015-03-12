@@ -4,11 +4,7 @@
 // This is just a "Hello there" inline element
 // which should disappear due to lack of space
 // when the device is in portrait mode:
-@media (orientation portrait)
+.greeting
 
-  .greeting
+  @media (max-width 768px - 1px) and (orientation portrait)
     display none
-
-    &:after
-      content '\A'
-      white-space pre
