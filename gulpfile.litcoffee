@@ -25,7 +25,7 @@ Dependencies
     coffee = require 'gulp-coffee'
     inject = require 'gulp-inject'
     concat = require 'gulp-concat'
-    less = require 'gulp-less'
+    stylus = require 'gulp-stylus'
     autoprefixer = require 'gulp-autoprefixer'
     minifyJS = require 'gulp-uglify'
     minifyCSS = require 'gulp-minify-css'
@@ -47,7 +47,7 @@ Source files and folders
     source.clientFavicon = "#{source.client}/favicon.ico"
     source.clientScripts = "#{source.client}/scripts/**/*.*coffee"
     source.clientStyles = [
-      "#{source.client}/styles/main.less"
+      "#{source.client}/styles/main.*"
       "#{source.client}/fonts/**/*.css"
     ]
 
@@ -151,7 +151,7 @@ Not supposed to be used directly. Use `gulp dist` instead.
 
       styles = gulp
         .src source.clientStyles
-        .pipe do less
+        .pipe do stylus
         .pipe concat 'all.css'
         .pipe autoprefixer
           browsers: ['last 2 versions']
@@ -187,7 +187,7 @@ Not supposed to be used directly. Use `gulp dev` instead.
 
       styles = gulp
         .src source.clientStyles
-        .pipe do less
+        .pipe do stylus
         .pipe autoprefixer
           browsers: ['last 2 versions']
           cascade: false
