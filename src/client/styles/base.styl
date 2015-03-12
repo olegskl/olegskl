@@ -15,14 +15,16 @@ html
 // -----------------------------------------------------------------------------
 
 a
+  $crimson = rgb(220, 20, 60)
+
   color inherit
   text-decoration none
 
   &:hover
   &:focus
     outline none
-    color rgb(220, 20, 60) // crimson
-    text-shadow 2px 2px 1px rgba(220, 20, 60, 0.08) // crimson
+    color $crimson
+    text-shadow 2px 2px 1px rgba($crimson, 0.08)
 
 // Sections
 // -----------------------------------------------------------------------------
