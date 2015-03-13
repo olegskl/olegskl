@@ -3,6 +3,7 @@
     isTouchDevice = window.hasOwnProperty 'ontouchstart'
     pointerDownEventName = if isTouchDevice then 'touchstart' else 'mousedown'
     pointerUpEventName = if isTouchDevice then 'touchend' else 'mouseup'
+    tapAnimatedElements = document.querySelectorAll '.tap-animate'
 
     pressHandler = (event) ->
       # Don't run animation on non-left button mouse clicks:
@@ -18,8 +19,8 @@
       @classList?.remove 'tap-animate-press-and-hold'
       @classList?.add 'tap-animate-release'
 
-    Array::slice
-      .call document.querySelectorAll '.tap-animate'
-      .forEach (element) ->
-        element.addEventListener pointerDownEventName, pressHandler
-        element.addEventListener pointerUpEventName, releaseHandler
+    handlePointerEventsOn = (element) ->
+      element.addEventListener pointerDownEventName, pressHandler
+      element.addEventListener pointerUpEventName, releaseHandler
+
+    handlePointerEventsOn element for element in tapAnimatedElements
