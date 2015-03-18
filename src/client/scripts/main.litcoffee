@@ -7,14 +7,14 @@
 
     pressHandler = (event) ->
       # Don't run animation on non-left button mouse clicks:
-      return if (not isTouchDevice and event.which isnt 1)
+      return if not isTouchDevice and event.which isnt 1
 
       @classList?.remove 'tap-animate-release'
       @classList?.add 'tap-animate-press-and-hold'
 
     releaseHandler = (event) ->
       # Don't run animation on non-left button mouse clicks:
-      return if (not isTouchDevice and event.which isnt 1)
+      return if not isTouchDevice and event.which isnt 1
 
       @classList?.remove 'tap-animate-press-and-hold'
       @classList?.add 'tap-animate-release'
