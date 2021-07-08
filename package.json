@@ -1,13 +1,13 @@
 {
   "name": "olegskl",
   "description": "Personal website of Oleg Sklyanchuk",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/olegskl/olegskl.git"
   },
   "scripts": {
-    "build": "rm -rf build && mkdir build && cp src/favicon.ico build/favicon.ico && html-minifier --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-tag-whitespace --minify-css true --output build/index.html src/index.html"
+    "build": "rm -rf build && mkdir build && cp src/* build && html-minifier --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-tag-whitespace --minify-css true --output build/index.html src/index.html"
   },
   "devDependencies": {
     "html-minifier": "^4.0.0"
