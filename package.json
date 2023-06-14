@@ -11,9 +11,7 @@
     "start": "live-server --port=4444 --open=src/index.html"
   },
   "devDependencies": {
-    "html-minifier": "^4.0.0"
-  },
-  "dependencies": {
+    "html-minifier": "^4.0.0",
     "live-server": "^1.2.2"
   }
 }
