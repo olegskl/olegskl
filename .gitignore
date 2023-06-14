@@ -1,9 +1,7 @@
 # Node .gitignore template
 # https://github.com/github/gitignore/blob/master/Node.gitignore
 
-build
-
-.DS_Store
+`.DS_Store
 *.seed
 *.log
 *.csv
