@@ -1,147 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Oleg Sklyanchuk" />
+    <meta
+      name="description"
+      content="Senior Software Engineer specializing in TypeScript, React, and Node.js with over a decade of experience building high quality platforms and tools for B2B businesses."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@olegskl" />
+    <meta
+      name="twitter:title"
+      content="Oleg Sklyanchuk – Senior Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Senior Software Engineer specializing in TypeScript, React, and Node.js with over a decade of experience building high quality platforms and tools for B2B businesses."
+    />
+    <meta name="twitter:image" content="https://olegskl.com/avatar.jpeg" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Oleg Sklyanchuk" />
-  <meta name="description"
-    content="Oleg Sklyanchuk is a Full-Stack Web Developer specialized in React and TypeScript." />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@olegskl" />
-  <meta name="twitter:title" content="Oleg Sklyanchuk" />
-  <meta name="twitter:description"
-    content="I'm a Full-Stack Web Developer specialized in React and TypeScript. I work at Upflow in Paris." />
-  <meta name="twitter:image" content="https://olegskl.com/avatar.jpeg" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#ffffff"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#16161d"
+    />
 
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#16161d" />
+    <link rel="icon" href="/favicon.svg" />
 
-  <link rel="icon" href="/favicon.svg" />
+    <title>Oleg Sklyanchuk – Senior Software Engineer</title>
 
-  <title>Oleg Sklyanchuk</title>
-
-  <style>
-    :root {
-      --background-color: #ffffff;
-      --color: #16161d;
-      --shadow: #eaeaea;
-    }
-
-    @media screen and (prefers-color-scheme: dark) {
+    <style>
       :root {
-        --background-color: #16161d;
-        --color: #e9e9e2;
-        --shadow: #333342;
+        --background-color: #ffffff;
+        --color: #16161d;
+        --shadow: #eaeaea;
+        --accent: #0066cc;
       }
-    }
 
-    html,
-    body {
-      margin: 0;
-      height: 100%;
-    }
+      @media screen and (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #16161d;
+          --color: #e9e9e2;
+          --shadow: #333342;
+          --accent: #4a9eff;
+        }
+      }
 
-    html {
-      width: 100%;
-      font-size: 20px;
-      line-height: 1.6;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif;
-      color: var(--color);
-      background: var(--background-color);
-    }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
 
-    @media (min-width: 768px) and (min-height: 450px) {
       html {
-        font-size: 22px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.7;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        color: var(--color);
+        background: var(--background-color);
       }
-    }
 
-    @media (min-width: 1024px) and (min-height: 450px) {
-      html {
-        font-size: 24px;
+      @media (min-width: 768px) and (min-height: 450px) {
+        html {
+          font-size: 19px;
+        }
       }
-    }
 
-    body {
-      display: flex;
-    }
+      @media (min-width: 1024px) and (min-height: 450px) {
+        html {
+          font-size: 20px;
+        }
+      }
 
-    main {
-      margin: auto;
-    }
+      body {
+        display: flex;
+      }
 
-    ::selection {
-      color: var(--background-color);
-      background: var(--color);
-    }
+      main {
+        margin: auto;
+        padding: 2rem 1rem;
+      }
 
-    h1 {
-      font-size: 35px;
-      margin: 1rem;
-    }
+      ::selection {
+        color: var(--background-color);
+        background: var(--color);
+      }
 
-    a {
-      color: inherit;
-    }
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 0 0 0.25rem 0;
+        letter-spacing: -0.02em;
+      }
 
-    a:hover,
-    a:focus {
-      outline: 0;
-      text-decoration-thickness: .25em;
-      background: var(--shadow);
-    }
+      .subtitle {
+        font-size: 1.1rem;
+        color: var(--color);
+        opacity: 0.7;
+        margin: 0 0 2rem 0;
+        font-weight: 400;
+      }
 
-    section {
-      margin: 1.8rem 1rem;
-      max-width: 30rem;
-    }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: background-color 0.15s ease;
+      }
 
-    @media (max-height: 450px) {
+      a:hover,
+      a:focus {
+        outline: 0;
+        text-decoration: underline;
+        text-decoration-thickness: 0.1em;
+        text-underline-offset: 0.15em;
+      }
+
       section {
-        margin: 1rem;
+        margin: 0 0 2rem 0;
+        max-width: 34rem;
       }
-    }
 
-    .sm-link {
-      line-height: 48px;
-    }
+      section p {
+        margin: 0 0 1rem 0;
+      }
 
-    .sm-link:not(:last-child) {
-      margin-right: 1.2rem;
-    }
-  </style>
-</head>
+      section p:last-child {
+        margin-bottom: 0;
+      }
 
-<body>
-  <main>
-    <h1>Hi! I'm Oleg Sklyanchuk.</h1>
-    <section>
-      <p>
-        I'm a Full-Stack Web Developer specialized in React and TypeScript.
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.75rem;
+        }
+
+        .subtitle {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Oleg Sklyanchuk</h1>
+      <p class="subtitle">
+        Senior Software Engineer - TypeScript, React, Node.js
       </p>
-      <p>
-        I advocate for clean, robust code based on
-        <a href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> and
-        <a href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it">YAGNI</a>
-        principles. I believe that performance, semantics and accessibility
-        are important features.
-      </p>
-      <p>
-        I currently work at <a href="https://upflow.io">Upflow</a>, previously at <a href="https://sfeir.com">SFEIR</a>
-        in Paris.
-      </p>
-    </section>
 
-    <section>
-      <a class="sm-link" href="https://www.linkedin.com/in/oleg-sklyanchuk/">Linkedin</a>
-      <a class="sm-link" href="https://twitter.com/olegskl">Twitter</a>
-      <a class="sm-link" href="https://github.com/olegskl">Github</a>
-      <a class="sm-link" href="http://stackoverflow.com/users/632133/oleg">StackOverflow</a>
-      <a class="sm-link" href="https://www.flickr.com/photos/sklyanchuk/">Flickr</a>
-    </section>
-  </main>
-</body>
-
+      <section>
+        <p>
+          I'm a software engineer with over a decade of experience building high
+          quality platforms and tools. For the past 4 years, I've been at
+          <a href="https://upflow.io">Upflow</a>, working on solutions that help
+          B2B businesses manage their cash flow.
+        </p>
+        <p>
+          Previously, I spent 8 years at
+          <a href="https://sfeir.com">SFEIR</a> as a consultant, delivering
+          projects across B2B and B2C platforms, internal tooling, and open
+          source initiatives.
+        </p>
+        <p>
+          I excel as an individual contributor who ships quality work and
+          collaborates effectively with engineering teams.
+        </p>
+        <p>
+          Find me on
+          <a href="https://www.linkedin.com/in/oleg-sklyanchuk/">LinkedIn</a>.
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
